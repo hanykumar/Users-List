@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="mt-4">
+    <div class="spinner-border" role="status" *ngIf="user == null">
+      <span class="sr-only">Loading...</span>
+    </div>
+
+    <div class="userDetail text-center" *ngIf="user != null">
+      <img class="text-center p-3" [src]='user.avatar' alt="" width="250px" height="250px" >
+      <p>{{user.first_name}} {{user.last_name}}</p>
+      <p>{{user.email}}</p>
+    </div>
+  </div>
+</div>

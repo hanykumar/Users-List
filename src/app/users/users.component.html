@@ -1,0 +1,27 @@
+<h1 class="text-center">Users</h1>
+
+<div class="container text-center">
+
+  <div class="spinner-border" role="status" *ngIf="users.length === 0">
+    <span class="sr-only">Loading...</span>
+  </div>
+  
+  <select name="select" id="select" *ngIf="users.length > 0" (change)="selected($event)">
+    <option value="id">None</option>
+    <option value="first_name">First Name</option>
+    <option value="last_name">Last Name</option>
+  </select>
+  
+
+  <div class="row" style="display:flex;" >
+    <div class="user" *ngFor="let u of users">
+      <div [routerLink]="['/user', u.id]" (click)="onUser(u.id)">
+        <div class="text-center">
+          <img class="text-center p-3" [src]="u.avatar" alt="User Image">
+        </div>
+        <p class="text-center">{{u.first_name}} {{u.last_name}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

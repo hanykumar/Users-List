@@ -1,0 +1,10 @@
+.user {
+    border: 1px solid #eeee;
+    width: auto;
+    min-width: 200px;
+    height: 100%;
+    margin: 10px;
+    box-shadow: rgba(150, 150, 150, 0.8) 0 0 10px;
+    padding: auto;
+    cursor: pointer;
+}
